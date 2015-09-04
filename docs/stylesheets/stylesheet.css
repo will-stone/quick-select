@@ -249,7 +249,8 @@ a {
 
 
 /* Quick[select] Tweaks */
-.quickselect__more--label:before {
-	content: '\2630';
-	margin-right: 5px;
+.quickselect__more--label:after {
+	content: '\25BC';
+	margin-left: 2px;
+	opacity: .5;
 }
