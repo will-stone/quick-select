@@ -1,4 +1,7 @@
 /* Keeps the absolutely positioned, hidden select box in place*/
+.quickselect__btn {
+	cursor: pointer;
+}
 .quickselect__more {
 	position: relative;
 }

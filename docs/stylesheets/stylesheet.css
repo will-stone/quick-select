@@ -15,7 +15,7 @@ a {
   a:hover {
     text-decoration: underline; }
 
-.btn {
+.button {
   display: inline-block;
   margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.7);
@@ -25,31 +25,31 @@ a {
   border-width: 1px;
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s; }
-  .btn + .btn {
+  .button + .button {
     margin-left: 1rem; }
 
-.btn:hover {
+.button:hover {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.3); }
 
 @media screen and (min-width: 64em) {
-  .btn {
+  .button {
     padding: 0.75rem 1rem; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
-  .btn {
+  .button {
     padding: 0.6rem 0.9rem;
     font-size: 0.9rem; } }
 
 @media screen and (max-width: 42em) {
-  .btn {
+  .button {
     display: block;
     width: 100%;
     padding: 0.75rem;
     font-size: 0.9rem; }
-    .btn + .btn {
+    .button + .button {
       margin-top: 1rem;
       margin-left: 0; } }
 
