@@ -250,7 +250,7 @@ a {
 
 /* Quick[select] Tweaks */
 .quickselect__more--label:after {
-	content: '\25BC';
-	margin-left: 2px;
+	content: '\25BE';
+	margin-left: 4px;
 	opacity: .5;
 }
