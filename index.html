@@ -9,6 +9,10 @@
 
 		<link rel="stylesheet" type="text/css" href="docs/stylesheets/bootstrap_btn.min.css">
 
+		<link rel="stylesheet" href="docs/stylesheets/mdl_btn.css">
+		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 		<link rel="stylesheet" type="text/css" href="dist/quickselect.css">
 		<script src="dist/jquery.quickselect.min.js"></script>
 	
@@ -27,9 +31,10 @@
 
 		<section class="main-content">
 
-			<h3>Overview</h3>
 			<p>
 				Do you like select boxes?
+			</p>
+			<p>
 				<select>
 					<option value="">Select one...</option>
 					<option value="Yes">Yes</option>
@@ -51,6 +56,8 @@
 			</p>
 			<p>
 				When would you like your wake up call?
+			</p>
+			<p>
 				<select id="wakeup">
 					<option value="">-- Pick a time --</option><option value="00:00">00:00</option><option value="00:15">00:15</option><option value="00:30">00:30</option><option value="00:45">00:45</option><option value="01:00">01:00</option><option value="01:15">01:15</option><option value="01:30">01:30</option><option value="01:45">01:45</option><option value="02:00">02:00</option><option value="02:15">02:15</option><option value="02:30">02:30</option><option value="02:45">02:45</option><option value="03:00">03:00</option><option value="03:15">03:15</option><option value="03:30">03:30</option><option value="03:45">03:45</option><option value="04:00">04:00</option><option value="04:15">04:15</option><option value="04:30">04:30</option><option value="04:45">04:45</option><option value="05:00">05:00</option><option value="05:15">05:15</option><option value="05:30">05:30</option><option value="05:45">05:45</option><option value="06:00">06:00</option><option value="06:15">06:15</option><option value="06:30">06:30</option><option value="06:45">06:45</option><option value="07:00">07:00</option><option value="07:15">07:15</option><option value="07:30">07:30</option><option value="07:45">07:45</option><option value="08:00">08:00</option><option value="08:15">08:15</option><option value="08:30">08:30</option><option value="08:45">08:45</option><option value="09:00">09:00</option><option value="09:15">09:15</option><option value="09:30">09:30</option><option value="09:45">09:45</option><option value="10:00">10:00</option><option value="10:15">10:15</option><option value="10:30">10:30</option><option value="10:45">10:45</option><option value="11:00">11:00</option><option value="11:15">11:15</option><option value="11:30">11:30</option><option value="11:45">11:45</option><option value="12:00">12:00</option><option value="12:15">12:15</option><option value="12:30">12:30</option><option value="12:45">12:45</option><option value="13:00">13:00</option><option value="13:15">13:15</option><option value="13:30">13:30</option><option value="13:45">13:45</option><option value="14:00">14:00</option><option value="14:15">14:15</option><option value="14:30">14:30</option><option value="14:45">14:45</option><option value="15:00">15:00</option><option value="15:15">15:15</option><option value="15:30">15:30</option><option value="15:45">15:45</option><option value="16:00">16:00</option><option value="16:15">16:15</option><option value="16:30">16:30</option><option value="16:45">16:45</option><option value="17:00">17:00</option><option value="17:15">17:15</option><option value="17:30">17:30</option><option value="17:45">17:45</option><option value="18:00">18:00</option><option value="18:15">18:15</option><option value="18:30">18:30</option><option value="18:45">18:45</option><option value="19:00">19:00</option><option value="19:15">19:15</option><option value="19:30">19:30</option><option value="19:45">19:45</option><option value="20:00">20:00</option><option value="20:15">20:15</option><option value="20:30">20:30</option><option value="20:45">20:45</option><option value="21:00">21:00</option><option value="21:15">21:15</option><option value="21:30">21:30</option><option value="21:45">21:45</option><option value="22:00">22:00</option><option value="22:15">22:15</option><option value="22:30">22:30</option><option value="22:45">22:45</option><option value="23:00">23:00</option><option value="23:15">23:15</option><option value="23:30">23:30</option><option value="23:45">23:45</option>
 				</select>
@@ -71,9 +78,11 @@
 
 
 			<h3>Examples</h3>
-			<h4>Bootstrap style</h4>
+			<h4>Bootstrap theme</h4>
 			<p>
 				What's your favourite meal?
+			</p>
+			<p>
 				<select id="bootstrap-example">
 					<option value="">Select one...</option>
 					<option value="Breakfast">Breakfast</option>
@@ -118,9 +127,11 @@
 </pre>
 
 
-			<h4>Material Design Lite style</h4>
+			<h4>Material Design Lite theme</h4>
 			<p>
 				What was your last takeaway?
+			</p>
+			<p>
 				<select id="mdl-example">
 					<option value="">Select one...</option>
 					<option value="Indian">Indian</option>
@@ -175,11 +186,147 @@
 &lt;/style&gt;
 </pre>
 
+			<p>
+				NB: the menu icon has been added with the following CSS:
+			</p>
+<pre>
+/* Quick[select] Tweaks */
+.quickselect__more--label:before {
+	content: '\2630';
+	margin-right: 5px;
+}
+</pre>
+
+
+
+			<h3>Tested with...</h3>
+			<ul>
+				<li>jQuery 2</li>
+				<li>IE 11</li>
+				<li>Firefox 40</li>
+				<li>Chrome 45</li>
+				<li>Safari 8</li>
+				<li>Chrome on Android/iOS</li>
+				<li>Safari on iOS</li>
+			</ul>
+			<p>
+				This is not to say it will not work on lower versions of the above, or other browsers.
+			</p>
+
+
+
+			<h3>Install</h3>
+			<p>
+				Download the source files from GitHub. Include the JS and CSS files in your HEAD tag:
+			</p>
+<pre>
+&lt;script src="/js/jquery.quickselect.min.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" type="text/css" href="/css/quickselect.css"&gt;
+</pre>
+		<p>
+			Attach Quick[select] to any of your select boxes:
+		</p>
+<pre>
+&lt;script type="text/javascript"&gt;
+	$('select').quickselect({
+		breakOutValues: ['1', '2', '3']
+	});
+&lt;/script&gt;
+</pre>
+
+			<h3>Options</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>Option</th>
+						<th>Type</th>
+						<th>Default</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>activeButtonClass</td>
+						<td>String</td>
+						<td>'active'</td>
+						<td>Class added to active/selected button</td>
+					</tr>
+					<tr>
+						<td>breakOutValues</td>
+						<td>Array</td>
+						<td>[]</td>
+						<td>Options to break out of the select box</td>
+					</tr>
+					<tr>
+						<td>buttonClass</td>
+						<td>String</td>
+						<td>''</td>
+						<td>Class added to each button</td>
+					</tr>
+					<tr>
+						<td>namespace</td>
+						<td>String</td>
+						<td>'quickselect'</td>
+						<td>Name appended to each class element. If changed, be careful to also update the quickselect.css file</td>
+					</tr>
+					<tr>
+						<td>selectDefaultText</td>
+						<td>String</td>
+						<td>'More&hellip;'</td>
+						<td>Text to display on non-selected select button</td>
+					</tr>
+					<tr>
+						<td>wrapperClass</td>
+						<td>String</td>
+						<td>''</td>
+						<td>Class to apply to the wrapping div (useful for Bootstrap grouped-buttons)</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+			<h3>Unlicensed</h3>
+			<p>
+				This is free and unencumbered software released into the public domain.
+			</p>
+
+			<p>
+				Anyone is free to copy, modify, publish, use, compile, sell, or
+				distribute this software, either in source code form or as a compiled
+				binary, for any purpose, commercial or non-commercial, and by any
+				means.
+			</p>
+
+			<p>
+				In jurisdictions that recognize copyright laws, the author or authors
+				of this software dedicate any and all copyright interest in the
+				software to the public domain. We make this dedication for the benefit
+				of the public at large and to the detriment of our heirs and
+				successors. We intend this dedication to be an overt act of
+				relinquishment in perpetuity of all present and future rights to this
+				software under copyright law.
+			</p>
+
+			<p>
+				THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+				EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+				MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+				IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+				OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+				ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+				OTHER DEALINGS IN THE SOFTWARE.
+			</p>
+
+			<p>
+				For more information, please refer to <a href="http://unlicense.org" target="_blank">http://unlicense.org</a>
+			</p>
+
 			
 			<footer class="site-footer">
-				<span class="site-footer-owner"><a href="https://github.com/eggboxio/quick-select">Quick[select]</a> is maintained by <a href="https://github.com/eggboxio">eggboxio</a>.</span>
-
-				<span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+				<span class="site-footer-owner">
+					<a href="https://github.com/eggboxio/quick-select">Quick[select]</a>
+					is a project by <a href="http://eggbox.io">EggBox</a>.
+				</span>
 			</footer>
 
 		</section>

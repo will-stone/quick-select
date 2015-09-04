@@ -113,6 +113,9 @@ a {
   margin-bottom: 1rem;
   font-weight: normal;
   color: #159957; }
+.main-content h3 {
+	margin-top: 6rem;
+}
 .main-content p {
   margin-bottom: 1em; }
 .main-content code {
@@ -243,3 +246,10 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+
+
+/* Quick[select] Tweaks */
+.quickselect__more--label:before {
+	content: '\2630';
+	margin-right: 5px;
+}
