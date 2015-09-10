@@ -73,7 +73,8 @@ a {
 
 .project-name {
   margin-top: 0;
-  margin-bottom: 0.1rem; }
+  margin-bottom: 0.1rem;
+  font-family: "Lucida Console", Monaco, monospace; }
 
 @media screen and (min-width: 64em) {
   .project-name {
