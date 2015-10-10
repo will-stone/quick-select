@@ -5,13 +5,6 @@
 .quickselect__more {
 	position: relative;
 }
-.quickselect__more.quickselect__hidden {
-	position: absolute;
-	width: 0;
-	height: 0;
-	visibility: hidden;
-	padding: 0;
-}
 .quickselect__select {
 	-webkit-appearance: menulist-button; /* Fix for Chrome's select box height bug */
 	width: 100%;
@@ -23,4 +16,11 @@
 	left: 0;
 	z-index: 1;
 	color: #333;
+}
+.quickselect__select.quickselect__hidden {
+	position: absolute;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	padding: 0;
 }
