@@ -6,9 +6,10 @@
 	var pluginName = "quickselect",
 		defaults = {
 			activeButtonClass: 'active', // added to active/selected button
+			breakOutAll: false,
 			breakOutValues: [], // options to break out of select box
 			buttonClass: '', // added to each button
-			namespace: 'quickselect', // CSS prepend: namespace_class
+			namespace: pluginName, // CSS prepend: namespace_class
 			selectDefaultText: 'More&hellip;', // text to display on select button
 			wrapperClass: '' // class on wrapping div
 		};
@@ -27,36 +28,57 @@
 		init: function () {
 			var el                = this.element,
 				activeButtonClass = this.settings.activeButtonClass,
+				breakOutAll       = this.settings.breakOutAll,
 				breakOutValues    = this.settings.breakOutValues,
 				buttonClass       = this.settings.buttonClass,
-				currentTxt        = $(el).find('option:selected').text(),
-				currentVal        = $(el).val(),
 				namespace         = this.settings.namespace,
 				selectDefaultText = this.settings.selectDefaultText,
 				wrapperClass      = this.settings.wrapperClass;
 
-			// Scaffolding
-			$(el).addClass(namespace + '__select');
-			$(el).wrap('<div class="' + namespace + '__wrapper ' + wrapperClass + '"></div>');
-			var wrapper = $(el).parent();
-			$(el).wrap('<div class="' + namespace + '__btn ' + namespace + '__more ' + buttonClass + '"></div>');
-			$('.' + namespace + '__more', $(wrapper)).append(
-				'<span class="' + namespace + '__more--label">' + selectDefaultText + '</span>'
-			);
+			// Select element wrapper
+			var wrapper = $('<div class="' + namespace + '__wrapper ' + wrapperClass + '"></div>');
+			$(el).addClass(namespace + '__select').before(wrapper);
 
-			// Reverse array direction for prepending
-			breakOutValues.reverse();
+			// if breakOutAll true then set breakOutValues array to all options
+			breakOutValues = (breakOutAll) ? $('option', el).map(function() {return this.value;}).get() : breakOutValues;
 
 			// Add buttons
 			$.each(breakOutValues, function(index, value){
 				var opVal = $(  'option[value="' + value + '"]', el ).attr('value'),
 					opTxt = $(  'option[value="' + value + '"]', el ).text();
 
-				$(wrapper)
-					.prepend('<span data-' + namespace + '-value="' + opVal + '" class="' + namespace + '__btn ' + buttonClass + '">' + opTxt + '</span>');
+				if (opVal) {
+					$(wrapper)
+						.append(
+							'<span data-'
+								+ namespace
+								+ '-value="'
+								+ opVal
+								+ '" class="'
+								+ namespace
+								+ '__btn '
+								+ buttonClass
+								+ '">'
+								+ opTxt
+							+ '</span>'
+						);
+				}
 			});
 
-			
+
+			if(breakOutAll) {
+				// Hide select overflow as all elements have been broken out. Can't use display none as
+				// the value will not be submitted.
+				$(el).addClass(namespace + 'hidden');
+			} else {
+				// move select box inside wrapper
+				$(el)
+					.wrap('<div class="' + namespace + '__btn ' + namespace + '__more ' + buttonClass + '"></div>')
+					.before('<span class="' + namespace + '__more--label">' + selectDefaultText + '</span>')
+					.parent()
+					.detach()
+					.appendTo(wrapper);
+			}
 			
 
 			// On select option change
@@ -64,34 +86,29 @@
 				var value = $(this).val();
 
 				// reset active classes
-				$('.' + namespace + '__btn, .' + namespace + '__more', $(wrapper)).removeClass(activeButtonClass);
+				$('.' + namespace + '__btn', $(wrapper)).removeClass(activeButtonClass);
 
-				// empty value
-				if (value=='') {
-					// More-button label
-					$('.' + namespace + '__more--label', $(wrapper)).html(selectDefaultText);
-				}
+				var moreButtonLabel = selectDefaultText;
+
 				// if option's value is a breakout button
-				else if ( jQuery.inArray(value, breakOutValues) !== -1 ) {
+				if ( $.inArray(value, breakOutValues) !== -1 || breakOutAll == true ) {
 					// Button active
 					$('.' + namespace + '__btn[data-' + namespace + '-value="' + value + '"]', $(wrapper)).addClass(activeButtonClass);
-
-					// More-button label
-					$('.' + namespace + '__more--label', $(wrapper)).html(selectDefaultText);
 				}
-				// else option must reside only in select dropdown
-				else {
+				// else option must reside only in overflow
+				else if ( value ) {
 					// More-button label
-					$('.' + namespace + '__more--label', $(wrapper)).html(
-						$('.' + namespace + '__select', $(wrapper)).find('option:selected').text()
-					);
+					moreButtonLabel = $(el).find('option:selected').text();
 					// More-button active
 					$('.' + namespace + '__more', $(wrapper)).addClass(activeButtonClass);
 				}
+
+				// Set More-button label
+				$('.' + namespace + '__more--label', $(wrapper)).html(moreButtonLabel);
 			});
 
 			// On button click trigger change
-			$('.' + namespace + '__btn[data-quickselect-value]', $(wrapper)).click(function() {
+			$('.' + namespace + '__btn[data-' + namespace + '-value]', $(wrapper)).click(function() {
 				if ( $(this).hasClass(activeButtonClass) ) {
 					$(el).val($("option:first", el).val()).change();
 				} else {
@@ -100,7 +117,7 @@
 			});
 
 			// Tigger change on load
-			$(el).val(currentVal).change();
+			$(el).val($(el).val()).change();
 			
 		}
 	});

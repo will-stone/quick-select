@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 		<link rel="stylesheet" type="text/css" href="dist/quickselect.css">
-		<script src="dist/jquery.quickselect.min.js"></script>
+		<script src="dist/jquery.quickselect.js"></script>
 	
 		<link rel="stylesheet" type="text/css" href="docs/stylesheets/normalize.css" media="screen">
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -126,6 +126,53 @@
 &lt;/script&gt;
 </pre>
 
+			<p>
+				What's your favourite meal? (show all options)
+			</p>
+			<p>
+				<select id="bootstrap-example2">
+					<option value="">Select one...</option>
+					<option value="Breakfast">Breakfast</option>
+					<option value="Brunch">Brunch</option>
+					<option value="Lunch">Lunch</option>
+					<option value="Afternoon Tea">Afternoon Tea</option>
+					<option value="Dinner">Dinner</option>
+					<option value="Midnight Snack">Midnight Snack</option>
+					<option value="I do not know">I do not know</option>
+				</select>
+
+				<script type="text/javascript">
+					$('#bootstrap-example2').quickselect({
+						activeButtonClass: 'btn-primary active',
+						breakOutAll: true,
+						buttonClass: 'btn btn-default',
+						selectDefaultText: 'Other',
+						wrapperClass: 'btn-group'
+					});
+				</script>
+			</p>
+<pre>
+&lt;select id="bootstrap-example2"&gt;
+	&lt;option value=""&gt;Select one...&lt;/option&gt;
+	&lt;option value="Breakfast"&gt;Breakfast&lt;/option&gt;
+	&lt;option value="Brunch"&gt;Brunch&lt;/option&gt;
+	&lt;option value="Lunch"&gt;Lunch&lt;/option&gt;
+	&lt;option value="Afternoon Tea"&gt;Afternoon Tea&lt;/option&gt;
+	&lt;option value="Dinner"&gt;Dinner&lt;/option&gt;
+	&lt;option value="Midnight Snack"&gt;Midnight Snack&lt;/option&gt;
+	&lt;option value="I do not know"&gt;I do not know&lt;/option&gt;
+&lt;/select&gt;
+&lt;script type="text/javascript"&gt;
+	$('#bootstrap-example').quickselect({
+		activeButtonClass: 'btn-primary active',
+		breakOutAll: true,
+		buttonClass: 'btn btn-default',
+		selectDefaultText: 'Other',
+		wrapperClass: 'btn-group'
+	});
+&lt;/script&gt;
+</pre>
+
 
 			<h4>Material Design Lite theme</h4>
 			<p>
@@ -218,9 +265,10 @@
 
 			<h3>Install</h3>
 			<p>
-				Download the source files from GitHub. Include the JS and CSS files in your HEAD tag:
+				Download the source files from GitHub. Include jQuery, the JS and CSS files in your HEAD tag:
 			</p>
 <pre>
+&lt;script src="https://code.jquery.com/jquery-2.1.4.min.js"&gt;&lt;/script&gt;
 &lt;script src="/js/jquery.quickselect.min.js"&gt;&lt;/script&gt;
 &lt;link rel="stylesheet" type="text/css" href="/css/quickselect.css"&gt;
 </pre>
@@ -251,6 +299,12 @@
 						<td>String</td>
 						<td>'active'</td>
 						<td>Class added to active/selected button</td>
+					</tr>
+					<tr>
+						<td>breakOutAll</td>
+						<td>Boolean</td>
+						<td>false</td>
+						<td>Overrides <strong>breakOutValues</strong> and breaks out all of the options</td>
 					</tr>
 					<tr>
 						<td>breakOutValues</td>
