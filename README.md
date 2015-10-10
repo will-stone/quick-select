@@ -1,3 +1,3 @@
 # Quick[select]
 
-See [here](http://eggboxio.github.io/quick-select/) for more info.
+See [here](http://quick-select.eggbox.io/) for more info.
