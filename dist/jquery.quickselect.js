@@ -50,7 +50,7 @@
 				if (opVal) {
 					$(wrapper)
 						.append(
-							'<span data-'
+							'<button aria-pressed="false" data-'
 								+ namespace
 								+ '-value="'
 								+ opVal
@@ -60,7 +60,7 @@
 								+ buttonClass
 								+ '">'
 								+ opTxt
-							+ '</span>'
+							+ '</button>'
 						);
 				}
 			});
@@ -79,7 +79,7 @@
 					.detach()
 					.appendTo(wrapper);
 			}
-			
+
 
 			// On select option change
 			$(el).change(function() {
@@ -118,6 +118,13 @@
 
 			// Tigger change on load
 			$(el).val($(el).val()).change();
+
+			// For keyboard navigation: show (opacity=1) original select box when focused
+			$(el).focus(function(){
+				$(this).css('opacity','1');
+			}).blur(function() {
+				$(this).css('opacity','0');
+			});
 			
 		}
 	});
