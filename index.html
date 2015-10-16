@@ -21,6 +21,10 @@
 		<link rel="stylesheet" type="text/css" href="docs/stylesheets/stylesheet.css" media="screen">
 	</head>
 	<body>
+		<script type="text/javascript">
+			// iFrame buster
+			if (top !== self) top.location.replace(self.location.href);
+		</script>
 		<section class="page-header">
 			<h1 class="project-name">Quick[select]</h1>
 			<h2 class="project-tagline">A jQuery plugin for quick selection of common options in select boxes. Selectual.</h2>
