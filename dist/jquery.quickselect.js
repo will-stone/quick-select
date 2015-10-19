@@ -1,3 +1,4 @@
+// v1.2
 ;(function ( $, window, document, undefined ) {
 
 	"use strict";
@@ -42,6 +43,8 @@
 			// if breakOutAll true then set breakOutValues array to all options
 			breakOutValues = (breakOutAll) ? $('option', el).map(function() {return this.value;}).get() : breakOutValues;
 
+			var disabled = ( $(el).is(":disabled") ? " disabled " : "" );
+
 			// Add buttons
 			$.each(breakOutValues, function(index, value){
 				var opVal = $(  'option[value="' + value + '"]', el ).attr('value'),
@@ -58,7 +61,9 @@
 								+ namespace
 								+ '__btn '
 								+ buttonClass
-								+ '">'
+								+ '"'
+								+ disabled
+								+'>'
 								+ opTxt
 							+ '</button>'
 						);
@@ -73,7 +78,7 @@
 			} else {
 				// move select box inside wrapper
 				$(el)
-					.wrap('<div class="' + namespace + '__btn ' + namespace + '__more ' + buttonClass + '"></div>')
+					.wrap('<div class="' + namespace + '__btn ' + namespace + '__more ' + buttonClass + '"' + disabled + '></div>')
 					.before('<span class="' + namespace + '__more--label">' + selectDefaultText + '</span>')
 					.parent()
 					.detach()

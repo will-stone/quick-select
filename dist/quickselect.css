@@ -1,7 +1,4 @@
 /* Keeps the absolutely positioned, hidden select box in place*/
-.quickselect__btn {
-	cursor: pointer;
-}
 .quickselect__more {
 	position: relative;
 }
@@ -10,12 +7,15 @@
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	cursor: pointer;
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 1;
 	color: #333;
+	border: 0;
+}
+.quickselect__select:not(:disabled) {
+	cursor: pointer;
 }
 .quickselect__select.quickselect__hidden {
 	position: absolute;

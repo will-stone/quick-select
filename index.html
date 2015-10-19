@@ -84,9 +84,8 @@
 
 			<h3>Examples</h3>
 			<h4>Bootstrap theme</h4>
-			<p>
-				What's your favourite meal?
-			</p>
+
+			<h5>What's your favourite meal?</h5>
 			<p>
 				<select id="bootstrap-example">
 					<option value="">Select one...</option>
@@ -131,9 +130,7 @@
 &lt;/script&gt;
 </pre>
 
-			<p>
-				What's your favourite meal? (show all options)
-			</p>
+			<h5>What's your favourite meal? (show all options)</h5>
 			<p>
 				<select id="bootstrap-example2">
 					<option value="">Select one...</option>
@@ -178,11 +175,54 @@
 &lt;/script&gt;
 </pre>
 
+			<h5>What's your favourite meal? (select box disabled: also disables break-out buttons)</h5>
+			<p>
+				<select id="bootstrap-example3" disabled>
+					<option value="">Select one...</option>
+					<option value="Breakfast">Breakfast</option>
+					<option value="Brunch">Brunch</option>
+					<option value="Lunch">Lunch</option>
+					<option value="Afternoon Tea">Afternoon Tea</option>
+					<option value="Dinner">Dinner</option>
+					<option value="Midnight Snack">Midnight Snack</option>
+					<option value="I do not know">I do not know</option>
+				</select>
+
+				<script type="text/javascript">
+					$('#bootstrap-example3').quickselect({
+						activeButtonClass: 'btn-primary active',
+						breakOutValues: ['Breakfast', 'Lunch', 'Dinner'],
+						buttonClass: 'btn btn-default',
+						selectDefaultText: 'Other',
+						wrapperClass: 'btn-group'
+					});
+				</script>
+			</p>
+<pre>
+&lt;select id="bootstrap-example3" disabled&gt;
+	&lt;option value=""&gt;Select one...&lt;/option&gt;
+	&lt;option value="Breakfast"&gt;Breakfast&lt;/option&gt;
+	&lt;option value="Brunch"&gt;Brunch&lt;/option&gt;
+	&lt;option value="Lunch"&gt;Lunch&lt;/option&gt;
+	&lt;option value="Afternoon Tea"&gt;Afternoon Tea&lt;/option&gt;
+	&lt;option value="Dinner"&gt;Dinner&lt;/option&gt;
+	&lt;option value="Midnight Snack"&gt;Midnight Snack&lt;/option&gt;
+	&lt;option value="I do not know"&gt;I do not know&lt;/option&gt;
+&lt;/select&gt;
+&lt;script type="text/javascript"&gt;
+	$('#bootstrap-example').quickselect({
+		activeButtonClass: 'btn-primary active',
+		breakOutValues: ['Breakfast', 'Lunch', 'Dinner'],
+		buttonClass: 'btn btn-default',
+		selectDefaultText: 'Other',
+		wrapperClass: 'btn-group'
+	});
+&lt;/script&gt;
+</pre>
+
 
 			<h4>Material Design Lite theme</h4>
-			<p>
-				What was your last takeaway?
-			</p>
+			<h5>What was your last takeaway?</h5>
 			<p>
 				<select id="mdl-example">
 					<option value="">Select one...</option>

@@ -1,0 +1,8 @@
+v1.2
+Disabled buttons if select is disabled on load. Remember to update CSS file also.
+Removed border from focused select box: especially prevalent on OSX
+v1.1
+Now keyboard accessible; break-out buttons are now <button> instead of <span> for native browser
+keyboard selection. Also listens for focus on the select box, and sets it to opacity=1 when focused.
+v1.0
+Initial release
