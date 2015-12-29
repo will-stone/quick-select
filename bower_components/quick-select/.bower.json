@@ -1,0 +1,51 @@
+{
+  "name": "quick-select",
+  "license": "MIT",
+  "description": "A jQuery plugin for quick selection of common options in select boxes. Selectual.",
+  "keywords": [
+    "jQuery-plugin",
+    "select",
+    "forms"
+  ],
+  "main": [
+    "./dist/js/jquery.quickselect.min.js",
+    "./dist/css/quickselect.css"
+  ],
+  "ignore": [
+    "src",
+    "test",
+    ".editorconfig",
+    ".gitignore",
+    ".jshintrc",
+    ".travis.yml",
+    "contributing.md",
+    "Gruntfile.js",
+    "package.json",
+    "readme.md"
+  ],
+  "dependencies": {
+    "jquery": "latest"
+  },
+  "devDependencies": {
+    "qunit": "~1.12.0",
+    "jquery": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eggboxio/quick-select.git"
+  },
+  "authors": [
+    "Will Stone <will@eggbox.io> (http://eggbox.io)"
+  ],
+  "homepage": "https://github.com/eggboxio/quick-select",
+  "_release": "2637e07dc5",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "2637e07dc5ada9df7fe5668d521f5d108a4beefb"
+  },
+  "_source": "git://github.com/eggboxio/quick-select.git",
+  "_target": "*",
+  "_originalSource": "quick-select",
+  "_direct": true
+}

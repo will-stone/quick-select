@@ -5,20 +5,20 @@
 		<title>Quick[select] by eggboxio</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="./bower_components/jquery/dist/jquery.min.js"></script>
 
-		<link rel="stylesheet" type="text/css" href="docs/stylesheets/bootstrap_btn.min.css">
+		<link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap_btn.min.css">
 
-		<link rel="stylesheet" href="docs/stylesheets/mdl_btn.css">
+		<link rel="stylesheet" href="./stylesheets/mdl_btn.css">
 		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-		<link rel="stylesheet" type="text/css" href="dist/quickselect.css">
-		<script src="dist/jquery.quickselect.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="./bower_components/quick-select/dist/css/quickselect.css">
+		<script src="./bower_components/quick-select/dist/js/jquery.quickselect.min.js"></script>
 	
-		<link rel="stylesheet" type="text/css" href="docs/stylesheets/normalize.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="./stylesheets/normalize.css" media="screen">
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="docs/stylesheets/stylesheet.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="./stylesheets/stylesheet.css" media="screen">
 	</head>
 	<body>
 		<script type="text/javascript">
@@ -29,8 +29,9 @@
 			<h1 class="project-name">Quick[select]</h1>
 			<h2 class="project-tagline">A jQuery plugin for quick selection of common options in select boxes. Selectual.</h2>
 			<a href="https://github.com/eggboxio/quick-select" class="button">View on GitHub</a>
-			<a href="https://github.com/eggboxio/quick-select/zipball/gh-pages" class="button">Download .zip</a>
-			<a href="https://github.com/eggboxio/quick-select/tarball/gh-pages" class="button">Download .tar.gz</a>
+			<a href="https://github.com/eggboxio/quick-select/zipball/master" class="button">Download .zip</a>
+			<a href="https://github.com/eggboxio/quick-select/tarball/master" class="button">Download .tar.gz</a>
+			<p><code>bower install --save quick-select</code></p>
 			<h3><a class="link" href="https://twitter.com/eggboxio">@eggboxio</a></h3>
 		</section>
 
@@ -312,7 +313,10 @@
 
 			<h3>Install</h3>
 			<p>
-				Download the source files from GitHub. Include jQuery, the JS and CSS files in your HEAD tag:
+				Use bower: <code>bower install --save quick-select</code> or download the source files directly from GitHub.
+			</p>
+			<p>
+				Include the jQuery, Quick[select] JS and CSS files:
 			</p>
 <pre>
 &lt;script src="https://code.jquery.com/jquery-2.1.4.min.js"&gt;&lt;/script&gt;
