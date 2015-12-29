@@ -1,0 +1,26 @@
+/* Keeps the absolutely positioned, hidden select box in place*/
+.quickselect__more {
+	position: relative;
+}
+.quickselect__select {
+	-webkit-appearance: menulist-button; /* Fix for Chrome's select box height bug */
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	color: #333;
+	border: 0;
+}
+.quickselect__select:not(:disabled) {
+	cursor: pointer;
+}
+.quickselect__select.quickselect__hidden {
+	position: absolute;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	padding: 0;
+}

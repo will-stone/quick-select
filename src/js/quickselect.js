@@ -1,5 +1,11 @@
-// v1.2
-;(function ( $, window, document, undefined ) {
+/*
+ * v2.0.0
+ *
+ *
+ * Copyright (c) 2015 Will Stone
+ * Licensed under the MIT license.
+ */
+;(function ($, window, document, undefined) {
 
 	"use strict";
 
@@ -10,6 +16,8 @@
 			breakOutAll: false,
 			breakOutValues: [], // options to break out of select box
 			buttonClass: '', // added to each button
+			buttonDefaultClass: '', // added to each button if select box is not a required field
+			buttonRequiredClass: '', // added to each button if select box is a required field
 			namespace: pluginName, // CSS prepend: namespace_class
 			selectDefaultText: 'More&hellip;', // text to display on select button
 			wrapperClass: '' // class on wrapping div
@@ -24,17 +32,20 @@
 		this.init();
 	}
 
+
 	// Avoid Plugin.prototype conflicts
 	$.extend(Plugin.prototype, {
 		init: function () {
-			var el                = this.element,
-				activeButtonClass = this.settings.activeButtonClass,
-				breakOutAll       = this.settings.breakOutAll,
-				breakOutValues    = this.settings.breakOutValues,
-				buttonClass       = this.settings.buttonClass,
-				namespace         = this.settings.namespace,
-				selectDefaultText = this.settings.selectDefaultText,
-				wrapperClass      = this.settings.wrapperClass;
+			var el                  = this.element,
+				activeButtonClass   = this.settings.activeButtonClass,
+				breakOutAll         = this.settings.breakOutAll,
+				breakOutValues      = this.settings.breakOutValues,
+				buttonClass         = this.settings.buttonClass,
+				buttonDefaultClass  = this.settings.buttonDefaultClass,
+				buttonRequiredClass = this.settings.buttonRequiredClass,
+				namespace           = this.settings.namespace,
+				selectDefaultText   = this.settings.selectDefaultText,
+				wrapperClass        = this.settings.wrapperClass;
 
 			// Select element wrapper
 			var wrapper = $('<div class="' + namespace + '__wrapper ' + wrapperClass + '"></div>');
@@ -43,7 +54,11 @@
 			// if breakOutAll true then set breakOutValues array to all options
 			breakOutValues = (breakOutAll) ? $('option', el).map(function() {return this.value;}).get() : breakOutValues;
 
+			// Adding disabled status to buttons
 			var disabled = ( $(el).is(":disabled") ? " disabled " : "" );
+
+			// Consolidate button classes
+			var btnClass = buttonClass + ' ' + ( $(el).is(":required") ? buttonRequiredClass : buttonDefaultClass );
 
 			// Add buttons
 			$.each(breakOutValues, function(index, value){
@@ -53,19 +68,7 @@
 				if (opVal) {
 					$(wrapper)
 						.append(
-							'<button aria-pressed="false" data-'
-								+ namespace
-								+ '-value="'
-								+ opVal
-								+ '" class="'
-								+ namespace
-								+ '__btn '
-								+ buttonClass
-								+ '"'
-								+ disabled
-								+'>'
-								+ opTxt
-							+ '</button>'
+							'<button aria-pressed="false" data-'+ namespace+ '-value="'+ opVal+ '" class="'+ namespace+ '__btn '+ btnClass + '"'+ disabled+'>'+ opTxt+ '</button>'
 						);
 				}
 			});
@@ -78,7 +81,7 @@
 			} else {
 				// move select box inside wrapper
 				$(el)
-					.wrap('<div class="' + namespace + '__btn ' + namespace + '__more ' + buttonClass + '"' + disabled + '></div>')
+					.wrap('<div class="' + namespace + '__btn ' + namespace + '__more ' + btnClass + '"' + disabled + '></div>')
 					.before('<span class="' + namespace + '__more--label">' + selectDefaultText + '</span>')
 					.parent()
 					.detach()
@@ -96,7 +99,7 @@
 				var moreButtonLabel = selectDefaultText;
 
 				// if option's value is a breakout button
-				if ( $.inArray(value, breakOutValues) !== -1 || breakOutAll == true ) {
+				if ( $.inArray(value, breakOutValues) !== -1 || breakOutAll === true ) {
 					// Button active
 					$('.' + namespace + '__btn[data-' + namespace + '-value="' + value + '"]', $(wrapper)).addClass(activeButtonClass);
 				}
@@ -121,7 +124,7 @@
 				}
 			});
 
-			// Tigger change on load
+			// Trigger change on load
 			$(el).val($(el).val()).change();
 
 			// For keyboard navigation: show (opacity=1) original select box when focused
@@ -130,9 +133,10 @@
 			}).blur(function() {
 				$(this).css('opacity','0');
 			});
-			
+
 		}
 	});
+
 
 	$.fn[ pluginName ] = function ( options ) {
 		return this.each(function() {
@@ -141,5 +145,4 @@
 			}
 		});
 	};
-
 })( jQuery, window, document );
