@@ -21,5 +21,12 @@
 	"devDependencies": {
 		"qunit": "~1.12.0",
 		"jquery": "latest"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:eggboxio/quick-select.git"
+	},
+	"authors": [
+		"Will Stone <will@eggbox.io> (http://eggbox.io)"
+	]
 }
