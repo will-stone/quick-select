@@ -4,9 +4,9 @@
 
 ## Getting Started
 
-Download the [production version][min].
+Download the [plugin][min].
 
-[min]: https://raw.githubusercontent.com/eggboxio/quick-select/master/dist/jquery.quickselect.min.js
+[min]: https://github.com/eggboxio/quick-select/archive/master.zip
 
 See [here](http://quick-select.eggbox.io) for installation information and examples.
 
