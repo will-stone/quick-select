@@ -25,90 +25,217 @@
 			// iFrame buster
 			if (top !== self) top.location.replace(self.location.href);
 		</script>
-		<section class="page-header">
+
+		<header class="page-header">
 			<h1 class="project-name">Quick[select]</h1>
+			<!-- By <a class="link" href="http://eggbox.io/">Will Stone</a> -->
+			<a class="link muted" href="https://twitter.com/eggboxio">@eggboxio</a>
 			<h2 class="project-tagline">A jQuery plugin for quick selection of common options in select boxes. Selectual.</h2>
 			<a href="https://github.com/eggboxio/quick-select" class="button">View on GitHub</a>
 			<a href="https://github.com/eggboxio/quick-select/zipball/master" class="button">Download .zip</a>
 			<a href="https://github.com/eggboxio/quick-select/tarball/master" class="button">Download .tar.gz</a>
-			<p><code>bower install --save quick-select</code></p>
-			<h3><a class="link" href="https://twitter.com/eggboxio">@eggboxio</a></h3>
-		</section>
+			<p><code>bower install quick-select --save</code></p>
+			<nav>
+				<ul>
+					<li><a href="#overview">Overview</a></li>
+					<li><a href="#features">Features</a></li>
+					<li><a href="#install">Install</a></li>
+					<li><a href="#options">Options</a></li>
+					<li><a href="#examples">Examples</a></li>
+					<li><a href="#license">License</a></li>
+				</ul>
+			</nav>
+		</header>
 
-		<section class="main-content">
+		<main class="main-content">
 
-			<p>
-				Do you like select boxes?
-			</p>
-			<p>
-				<select>
-					<option value="">Select one...</option>
-					<option value="Yes">Yes</option>
-					<option value="No">No</option>
-					<option value="Maybe">Maybe</option>
-					<option value="I do not know">I do not know</option>
-					<option value="NA">N/A</option>
-				</select>
-			</p>
-			<p>
-				Select boxes are a two tap/click operation. They take the user out
-				of the flow of the form, and usually there are certain answers that will be more commonly chosen than others.
-				Take the example above, most would reply with "yes" or "no". Or maybe you would <i>prefer</i> people to give a definite yes/no answer.
-				This plugin provides the ability to bring those options	outside of the select list.
-			</p>
-			<p>
-				Quick[select] prompts a user to an answer but provides flexibility for questions that need it.
-				Take the following example:
-			</p>
-			<p>
-				When would you like your wake up call?
-			</p>
-			<p>
-				<select id="wakeup">
-					<option value="">-- Pick a time --</option><option value="00:00">00:00</option><option value="00:15">00:15</option><option value="00:30">00:30</option><option value="00:45">00:45</option><option value="01:00">01:00</option><option value="01:15">01:15</option><option value="01:30">01:30</option><option value="01:45">01:45</option><option value="02:00">02:00</option><option value="02:15">02:15</option><option value="02:30">02:30</option><option value="02:45">02:45</option><option value="03:00">03:00</option><option value="03:15">03:15</option><option value="03:30">03:30</option><option value="03:45">03:45</option><option value="04:00">04:00</option><option value="04:15">04:15</option><option value="04:30">04:30</option><option value="04:45">04:45</option><option value="05:00">05:00</option><option value="05:15">05:15</option><option value="05:30">05:30</option><option value="05:45">05:45</option><option value="06:00">06:00</option><option value="06:15">06:15</option><option value="06:30">06:30</option><option value="06:45">06:45</option><option value="07:00">07:00</option><option value="07:15">07:15</option><option value="07:30">07:30</option><option value="07:45">07:45</option><option value="08:00">08:00</option><option value="08:15">08:15</option><option value="08:30">08:30</option><option value="08:45">08:45</option><option value="09:00">09:00</option><option value="09:15">09:15</option><option value="09:30">09:30</option><option value="09:45">09:45</option><option value="10:00">10:00</option><option value="10:15">10:15</option><option value="10:30">10:30</option><option value="10:45">10:45</option><option value="11:00">11:00</option><option value="11:15">11:15</option><option value="11:30">11:30</option><option value="11:45">11:45</option><option value="12:00">12:00</option><option value="12:15">12:15</option><option value="12:30">12:30</option><option value="12:45">12:45</option><option value="13:00">13:00</option><option value="13:15">13:15</option><option value="13:30">13:30</option><option value="13:45">13:45</option><option value="14:00">14:00</option><option value="14:15">14:15</option><option value="14:30">14:30</option><option value="14:45">14:45</option><option value="15:00">15:00</option><option value="15:15">15:15</option><option value="15:30">15:30</option><option value="15:45">15:45</option><option value="16:00">16:00</option><option value="16:15">16:15</option><option value="16:30">16:30</option><option value="16:45">16:45</option><option value="17:00">17:00</option><option value="17:15">17:15</option><option value="17:30">17:30</option><option value="17:45">17:45</option><option value="18:00">18:00</option><option value="18:15">18:15</option><option value="18:30">18:30</option><option value="18:45">18:45</option><option value="19:00">19:00</option><option value="19:15">19:15</option><option value="19:30">19:30</option><option value="19:45">19:45</option><option value="20:00">20:00</option><option value="20:15">20:15</option><option value="20:30">20:30</option><option value="20:45">20:45</option><option value="21:00">21:00</option><option value="21:15">21:15</option><option value="21:30">21:30</option><option value="21:45">21:45</option><option value="22:00">22:00</option><option value="22:15">22:15</option><option value="22:30">22:30</option><option value="22:45">22:45</option><option value="23:00">23:00</option><option value="23:15">23:15</option><option value="23:30">23:30</option><option value="23:45">23:45</option>
-				</select>
-				<script type="text/javascript">
-					$('#wakeup').quickselect({
-						activeButtonClass: 'btn-primary active',
-						breakOutValues: ['06:30', '07:00', '07:30', '08:00'],
-						buttonClass: 'btn btn-default',
-						selectDefaultText: 'Other',
-						wrapperClass: 'btn-group'
-					});
-				</script>
-			</p>
-			<p>
-				Quick[select] uses the browser's native select list for its overflow, meaning it will work great on all devices.
-			</p>
+			<section id="overview">
+				<h3>Overview</h3>
+
+				<p>
+					Do you like select boxes?
+				</p>
+				<p>
+					<select>
+						<option value="">Select one...</option>
+						<option value="Yes">Yes</option>
+						<option value="No">No</option>
+						<option value="Maybe">Maybe</option>
+						<option value="I do not know">I do not know</option>
+						<option value="NA">N/A</option>
+					</select>
+				</p>
+				<p>
+					Select boxes are a two tap/click operation. They take the user out
+					of the flow of the form, and usually there are certain answers that will be more commonly chosen than others.
+					Take the example above, most would reply with "yes" or "no". Or maybe you would <i>prefer</i> people to give a definite yes/no answer.
+					This plugin provides the ability to bring those options	outside of the select list.
+				</p>
+				<p>
+					Quick[select] prompts a user to an answer but provides flexibility for questions that need it.
+					Take the following example:
+				</p>
+				<p>
+					When would you like your wake up call?
+				</p>
+				<p>
+					<select id="wakeup">
+						<option value="">-- Pick a time --</option><option value="00:00">00:00</option><option value="00:15">00:15</option><option value="00:30">00:30</option><option value="00:45">00:45</option><option value="01:00">01:00</option><option value="01:15">01:15</option><option value="01:30">01:30</option><option value="01:45">01:45</option><option value="02:00">02:00</option><option value="02:15">02:15</option><option value="02:30">02:30</option><option value="02:45">02:45</option><option value="03:00">03:00</option><option value="03:15">03:15</option><option value="03:30">03:30</option><option value="03:45">03:45</option><option value="04:00">04:00</option><option value="04:15">04:15</option><option value="04:30">04:30</option><option value="04:45">04:45</option><option value="05:00">05:00</option><option value="05:15">05:15</option><option value="05:30">05:30</option><option value="05:45">05:45</option><option value="06:00">06:00</option><option value="06:15">06:15</option><option value="06:30">06:30</option><option value="06:45">06:45</option><option value="07:00">07:00</option><option value="07:15">07:15</option><option value="07:30">07:30</option><option value="07:45">07:45</option><option value="08:00">08:00</option><option value="08:15">08:15</option><option value="08:30">08:30</option><option value="08:45">08:45</option><option value="09:00">09:00</option><option value="09:15">09:15</option><option value="09:30">09:30</option><option value="09:45">09:45</option><option value="10:00">10:00</option><option value="10:15">10:15</option><option value="10:30">10:30</option><option value="10:45">10:45</option><option value="11:00">11:00</option><option value="11:15">11:15</option><option value="11:30">11:30</option><option value="11:45">11:45</option><option value="12:00">12:00</option><option value="12:15">12:15</option><option value="12:30">12:30</option><option value="12:45">12:45</option><option value="13:00">13:00</option><option value="13:15">13:15</option><option value="13:30">13:30</option><option value="13:45">13:45</option><option value="14:00">14:00</option><option value="14:15">14:15</option><option value="14:30">14:30</option><option value="14:45">14:45</option><option value="15:00">15:00</option><option value="15:15">15:15</option><option value="15:30">15:30</option><option value="15:45">15:45</option><option value="16:00">16:00</option><option value="16:15">16:15</option><option value="16:30">16:30</option><option value="16:45">16:45</option><option value="17:00">17:00</option><option value="17:15">17:15</option><option value="17:30">17:30</option><option value="17:45">17:45</option><option value="18:00">18:00</option><option value="18:15">18:15</option><option value="18:30">18:30</option><option value="18:45">18:45</option><option value="19:00">19:00</option><option value="19:15">19:15</option><option value="19:30">19:30</option><option value="19:45">19:45</option><option value="20:00">20:00</option><option value="20:15">20:15</option><option value="20:30">20:30</option><option value="20:45">20:45</option><option value="21:00">21:00</option><option value="21:15">21:15</option><option value="21:30">21:30</option><option value="21:45">21:45</option><option value="22:00">22:00</option><option value="22:15">22:15</option><option value="22:30">22:30</option><option value="22:45">22:45</option><option value="23:00">23:00</option><option value="23:15">23:15</option><option value="23:30">23:30</option><option value="23:45">23:45</option>
+					</select>
+					<script type="text/javascript">
+						$('#wakeup').quickselect({
+							activeButtonClass: 'btn-primary active',
+							breakOutValues: ['06:30', '07:00', '07:30', '08:00'],
+							buttonClass: 'btn btn-default',
+							selectDefaultText: 'Other',
+							wrapperClass: 'btn-group'
+						});
+					</script>
+				</p>
+				<p>
+					Quick[select] uses the browser's native select list for its overflow, meaning it will work great on all devices.
+				</p>
+			</section>
+
+			<section id="features">
+				<h3>Features</h3>
+				<ul>
+					<li>
+						Tested on all common, modern browsers.
+						<ul>
+							<li>IE 11</li>
+							<li>Firefox 40</li>
+							<li>Chrome 45</li>
+							<li>Safari 8</li>
+							<li>Chrome on Android/iOS</li>
+							<li>Safari on iOS</li>
+						</ul>
+					</li>
+					<li>Keyboard accessible.</li>
+					<li>Works well with Bootstrap and Material Design Lite CSS frameworks.</li>
+				</ul>
+			</section>
 
 
+			<section id="install">
+				<h3>Install</h3>
+				<p>
+					Use bower: <code>bower install quick-select --save</code> or download the source files directly from <a href="https://github.com/eggboxio/quick-select">GitHub</a>.
+				</p>
+				<p>
+					Include the jQuery, Quick[select] JS and CSS files then attach Quick[select] to any
+					of your select boxes:
+				</p>
+<pre>
+&lt;script type="text/javascript"&gt;
+	$('select').quickselect({
+		breakOutValues: ['1', '2', '3']
+	});
+&lt;/script&gt;
+</pre>
+			</section>
 
-			<h3>Examples</h3>
-			<h4>Bootstrap theme</h4>
 
-			<h5>What's your favourite meal?</h5>
-			<p>
-				<select id="bootstrap-example">
-					<option value="">Select one...</option>
-					<option value="Breakfast">Breakfast</option>
-					<option value="Brunch">Brunch</option>
-					<option value="Lunch">Lunch</option>
-					<option value="Afternoon Tea">Afternoon Tea</option>
-					<option value="Dinner">Dinner</option>
-					<option value="Midnight Snack">Midnight Snack</option>
-					<option value="I do not know">I do not know</option>
-				</select>
+			<section id="options">
+				<h3>Options</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Option</th>
+							<th>Type</th>
+							<th>Default</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>activeButtonClass</td>
+							<td>String</td>
+							<td>'active'</td>
+							<td>Class added to active/selected button</td>
+						</tr>
+						<tr>
+							<td>breakOutAll</td>
+							<td>Boolean</td>
+							<td>false</td>
+							<td>Overrides <strong>breakOutValues</strong> and breaks out all of the options</td>
+						</tr>
+						<tr>
+							<td>breakOutValues</td>
+							<td>Array</td>
+							<td>[]</td>
+							<td>Values of options to break out of the select box</td>
+						</tr>
+						<tr>
+							<td>buttonClass</td>
+							<td>String</td>
+							<td>''</td>
+							<td>Class added to each button</td>
+						</tr>
+						<tr>
+							<td>buttonDefaultClass</td>
+							<td>String</td>
+							<td>''</td>
+							<td>
+								Class added to each button if select box is not a required field
+							</td>
+						</tr>
+						<tr>
+							<td>buttonRequiredClass</td>
+							<td>String</td>
+							<td>''</td>
+							<td>Class added to each button if select box is a required field</td>
+						</tr>
+						<tr>
+							<td>namespace</td>
+							<td>String</td>
+							<td>'quickselect'</td>
+							<td>Name appended to each class element. If changed, be careful to also update the quickselect.css file</td>
+						</tr>
+						<tr>
+							<td>selectDefaultText</td>
+							<td>String</td>
+							<td>'More&hellip;'</td>
+							<td>Text to display on non-selected select button</td>
+						</tr>
+						<tr>
+							<td>wrapperClass</td>
+							<td>String</td>
+							<td>''</td>
+							<td>Class to apply to the wrapping div (useful for Bootstrap grouped-buttons)</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
 
-				<script type="text/javascript">
-					$('#bootstrap-example').quickselect({
-						activeButtonClass: 'btn-primary active',
-						breakOutValues: ['Breakfast', 'Lunch', 'Dinner'],
-						buttonClass: 'btn btn-default',
-						selectDefaultText: 'Other',
-						wrapperClass: 'btn-group'
-					});
-				</script>
-			</p>
+
+			<section id="examples">
+				<h3>Examples</h3>
+				<h4>Bootstrap theme</h4>
+
+				<h5>What's your favourite meal?</h5>
+				<p>
+					<select id="bootstrap-example">
+						<option value="">Select one...</option>
+						<option value="Breakfast">Breakfast</option>
+						<option value="Brunch">Brunch</option>
+						<option value="Lunch">Lunch</option>
+						<option value="Afternoon Tea">Afternoon Tea</option>
+						<option value="Dinner">Dinner</option>
+						<option value="Midnight Snack">Midnight Snack</option>
+						<option value="I do not know">I do not know</option>
+					</select>
+
+					<script type="text/javascript">
+						$('#bootstrap-example').quickselect({
+							activeButtonClass: 'btn-primary active',
+							breakOutValues: ['Breakfast', 'Lunch', 'Dinner'],
+							buttonClass: 'btn btn-default',
+							selectDefaultText: 'Other',
+							wrapperClass: 'btn-group'
+						});
+					</script>
+				</p>
 <pre>
 &lt;select id="bootstrap-example"&gt;
 	&lt;option value=""&gt;Select one...&lt;/option&gt;
@@ -131,29 +258,29 @@
 &lt;/script&gt;
 </pre>
 
-			<h5>What's your favourite meal? (show all options)</h5>
-			<p>
-				<select id="bootstrap-example2">
-					<option value="">Select one...</option>
-					<option value="Breakfast">Breakfast</option>
-					<option value="Brunch">Brunch</option>
-					<option value="Lunch">Lunch</option>
-					<option value="Afternoon Tea">Afternoon Tea</option>
-					<option value="Dinner">Dinner</option>
-					<option value="Midnight Snack">Midnight Snack</option>
-					<option value="I do not know">I do not know</option>
-				</select>
+				<h5>What's your favourite meal? (show all options)</h5>
+				<p>
+					<select id="bootstrap-example2">
+						<option value="">Select one...</option>
+						<option value="Breakfast">Breakfast</option>
+						<option value="Brunch">Brunch</option>
+						<option value="Lunch">Lunch</option>
+						<option value="Afternoon Tea">Afternoon Tea</option>
+						<option value="Dinner">Dinner</option>
+						<option value="Midnight Snack">Midnight Snack</option>
+						<option value="I do not know">I do not know</option>
+					</select>
 
-				<script type="text/javascript">
-					$('#bootstrap-example2').quickselect({
-						activeButtonClass: 'btn-primary active',
-						breakOutAll: true,
-						buttonClass: 'btn btn-default',
-						selectDefaultText: 'Other',
-						wrapperClass: 'btn-group'
-					});
-				</script>
-			</p>
+					<script type="text/javascript">
+						$('#bootstrap-example2').quickselect({
+							activeButtonClass: 'btn-primary active',
+							breakOutAll: true,
+							buttonClass: 'btn btn-default',
+							selectDefaultText: 'Other',
+							wrapperClass: 'btn-group'
+						});
+					</script>
+				</p>
 <pre>
 &lt;select id="bootstrap-example2"&gt;
 	&lt;option value=""&gt;Select one...&lt;/option&gt;
@@ -176,29 +303,29 @@
 &lt;/script&gt;
 </pre>
 
-			<h5>What's your favourite meal? (select box disabled: also disables break-out buttons)</h5>
-			<p>
-				<select id="bootstrap-example3" disabled>
-					<option value="">Select one...</option>
-					<option value="Breakfast">Breakfast</option>
-					<option value="Brunch">Brunch</option>
-					<option value="Lunch">Lunch</option>
-					<option value="Afternoon Tea">Afternoon Tea</option>
-					<option value="Dinner">Dinner</option>
-					<option value="Midnight Snack">Midnight Snack</option>
-					<option value="I do not know">I do not know</option>
-				</select>
+				<h5>What's your favourite meal? (select box disabled: also disables break-out buttons)</h5>
+				<p>
+					<select id="bootstrap-example3" disabled>
+						<option value="">Select one...</option>
+						<option value="Breakfast">Breakfast</option>
+						<option value="Brunch">Brunch</option>
+						<option value="Lunch">Lunch</option>
+						<option value="Afternoon Tea">Afternoon Tea</option>
+						<option value="Dinner">Dinner</option>
+						<option value="Midnight Snack">Midnight Snack</option>
+						<option value="I do not know">I do not know</option>
+					</select>
 
-				<script type="text/javascript">
-					$('#bootstrap-example3').quickselect({
-						activeButtonClass: 'btn-primary active',
-						breakOutValues: ['Breakfast', 'Lunch', 'Dinner'],
-						buttonClass: 'btn btn-default',
-						selectDefaultText: 'Other',
-						wrapperClass: 'btn-group'
-					});
-				</script>
-			</p>
+					<script type="text/javascript">
+						$('#bootstrap-example3').quickselect({
+							activeButtonClass: 'btn-primary active',
+							breakOutValues: ['Breakfast', 'Lunch', 'Dinner'],
+							buttonClass: 'btn btn-default',
+							selectDefaultText: 'Other',
+							wrapperClass: 'btn-group'
+						});
+					</script>
+				</p>
 <pre>
 &lt;select id="bootstrap-example3" disabled&gt;
 	&lt;option value=""&gt;Select one...&lt;/option&gt;
@@ -222,35 +349,35 @@
 </pre>
 
 
-			<h4>Material Design Lite theme</h4>
-			<h5>What was your last takeaway?</h5>
-			<p>
-				<select id="mdl-example">
-					<option value="">Select one...</option>
-					<option value="Indian">Indian</option>
-					<option value="Chinese">Chinese</option>
-					<option value="Pizza">Pizza</option>
-					<option value="Fish and Chips">Fish and Chips</option>
-					<option value="Thai">Thai</option>
-					<option value="Fast Food">Fast Food</option>
-				</select>
+				<h4>Material Design Lite theme</h4>
+				<h5>What was your last takeaway?</h5>
+				<p>
+					<select id="mdl-example">
+						<option value="">Select one...</option>
+						<option value="Indian">Indian</option>
+						<option value="Chinese">Chinese</option>
+						<option value="Pizza">Pizza</option>
+						<option value="Fish and Chips">Fish and Chips</option>
+						<option value="Thai">Thai</option>
+						<option value="Fast Food">Fast Food</option>
+					</select>
 
-				<script type="text/javascript">
-					$('#mdl-example').quickselect({
-						activeButtonClass: 'mdl-button--raised',
-						breakOutValues: ['Indian', 'Pizza', 'Chinese'],
-						buttonClass: 'mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent',
-						selectDefaultText: 'Other',
-						wrapperClass: 'mdl__wrapper'
-					});
-				</script>
+					<script type="text/javascript">
+						$('#mdl-example').quickselect({
+							activeButtonClass: 'mdl-button--raised',
+							breakOutValues: ['Indian', 'Pizza', 'Chinese'],
+							buttonClass: 'mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent',
+							selectDefaultText: 'Other',
+							wrapperClass: 'mdl__wrapper'
+						});
+					</script>
 
-				<style type="text/css">
-					.mdl__wrapper {
-						display: inline-block;
-					}
-				</style>
-			</p>
+					<style type="text/css">
+						.mdl__wrapper {
+							display: inline-block;
+						}
+					</style>
+				</p>
 <pre>
 &lt;select id="mdl-example"&gt;
 	&lt;option value=""&gt;Select one...&lt;/option&gt;
@@ -290,126 +417,49 @@
 	opacity: .5;
 }
 </pre>
+			</section>
 
 
 
-			<h3>Tested with...</h3>
-			<ul>
-				<li>jQuery 2</li>
-				<li>IE 11</li>
-				<li>Firefox 40</li>
-				<li>Chrome 45</li>
-				<li>Safari 8</li>
-				<li>Chrome on Android/iOS</li>
-				<li>Safari on iOS</li>
-			</ul>
-			<p>
-				This is not to say it will not work on lower versions, or other browsers.
-			</p>
+			<section id="license">
+				<h3>License</h3>
+				<h4>The MIT License (MIT)</h4>
 
-			<p>Now keyboard accessible. Use your tab key on this page to give it a go.</p>
+				<p>Copyright (c) 2015 Will Stone</p>
 
+				<p>
+					Permission is hereby granted, free of charge, to any person obtaining a copy of
+					this software and associated documentation files (the "Software"), to deal in
+					the Software without restriction, including without limitation the rights to
+					use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+					the Software, and to permit persons to whom the Software is furnished to do so,
+					subject to the following conditions:
+				</p>
 
+				<p>
+					The above copyright notice and this permission notice shall be included in all
+					copies or substantial portions of the Software.
+				</p>
 
-			<h3>Install</h3>
-			<p>
-				Use bower: <code>bower install --save quick-select</code> or download the source files directly from GitHub.
-			</p>
-			<p>
-				Include the jQuery, Quick[select] JS and CSS files:
-			</p>
-<pre>
-&lt;script src="https://code.jquery.com/jquery-2.1.4.min.js"&gt;&lt;/script&gt;
-&lt;script src="/js/jquery.quickselect.min.js"&gt;&lt;/script&gt;
-&lt;link rel="stylesheet" type="text/css" href="/css/quickselect.css"&gt;
-</pre>
-		<p>
-			Attach Quick[select] to any of your select boxes:
-		</p>
-<pre>
-&lt;script type="text/javascript"&gt;
-	$('select').quickselect({
-		breakOutValues: ['1', '2', '3']
-	});
-&lt;/script&gt;
-</pre>
+				<p>
+					THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+					IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+					FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+					COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+					IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+					CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+				</p>
+			</section>
+			
 
-			<h3>Options</h3>
-			<table>
-				<thead>
-					<tr>
-						<th>Option</th>
-						<th>Type</th>
-						<th>Default</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>activeButtonClass</td>
-						<td>String</td>
-						<td>'active'</td>
-						<td>Class added to active/selected button</td>
-					</tr>
-					<tr>
-						<td>breakOutAll</td>
-						<td>Boolean</td>
-						<td>false</td>
-						<td>Overrides <strong>breakOutValues</strong> and breaks out all of the options</td>
-					</tr>
-					<tr>
-						<td>breakOutValues</td>
-						<td>Array</td>
-						<td>[]</td>
-						<td>Values of options to break out of the select box</td>
-					</tr>
-					<tr>
-						<td>buttonClass</td>
-						<td>String</td>
-						<td>''</td>
-						<td>Class added to each button</td>
-					</tr>
-					<tr>
-						<td>namespace</td>
-						<td>String</td>
-						<td>'quickselect'</td>
-						<td>Name appended to each class element. If changed, be careful to also update the quickselect.css file</td>
-					</tr>
-					<tr>
-						<td>selectDefaultText</td>
-						<td>String</td>
-						<td>'More&hellip;'</td>
-						<td>Text to display on non-selected select button</td>
-					</tr>
-					<tr>
-						<td>wrapperClass</td>
-						<td>String</td>
-						<td>''</td>
-						<td>Class to apply to the wrapping div (useful for Bootstrap grouped-buttons)</td>
-					</tr>
-				</tbody>
-			</table>
+		</main>
 
-
-			<h3>License</h3>
-			<h4>The MIT License (MIT)</h4>
-
-			<p>Copyright (c) 2015 Will Stone</p>
-
-			<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
-
-			<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
-
-			<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
-
-			<footer class="site-footer">
-				<span class="site-footer-owner">
-					<a href="https://github.com/eggboxio/quick-select">Quick[select]</a>
-					is a project by <a href="http://eggbox.io">EggBox</a>.
-				</span>
-			</footer>
-
-		</section>
+		<footer class="site-footer">
+			<span class="site-footer-owner">
+				<a href="https://github.com/eggboxio/quick-select">Quick[select]</a>
+				is a project from <a href="http://eggbox.io">EggBox</a>.
+			</span>
+		</footer>
 
 		<!-- Start of StatCounter Code for Default Guide -->
 		<script type="text/javascript">
