@@ -4,11 +4,7 @@
 
 ## Getting Started
 
-Download the [plugin][min].
-
-[min]: https://github.com/eggboxio/quick-select/archive/master.zip
-
-See [here](http://quick-select.eggbox.io) for installation information and examples.
+Please see [the document page](http://quick-select.eggbox.io) for installation information and examples.
 
 ## License
 
