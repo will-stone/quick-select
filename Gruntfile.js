@@ -23,10 +23,10 @@ module.exports = function (grunt) {
 				banner: '<%= banner %>',
 				stripBanners: true
 			},
-			// js: {
-			// 	src: ['src/js/<%= pkg.name %>.js'],
-			// 	dest: 'dist/js/jquery.<%= pkg.name %>.js'
-			// },
+			js: {
+				src: ['src/js/<%= pkg.name %>.js'],
+				dest: 'dist/js/jquery.<%= pkg.name %>.js'
+			},
 			css: {
 				src: ['src/css/<%= pkg.name %>.css'],
 				dest: 'dist/css/<%= pkg.name %>.css'
