@@ -8,7 +8,7 @@
     "forms"
   ],
   "main": [
-    "./dist/js/jquery.quickselect.min.js",
+    "./dist/js/jquery.quickselect.js",
     "./dist/css/quickselect.css"
   ],
   "ignore": [
@@ -38,13 +38,13 @@
     "Will Stone <will@eggbox.io> (http://eggbox.io)"
   ],
   "homepage": "https://github.com/eggboxio/quick-select",
-  "_release": "2637e07dc5",
+  "_release": "5519f346f0",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "2637e07dc5ada9df7fe5668d521f5d108a4beefb"
+    "commit": "5519f346f0722115033380eeb4dfa12ff347f89c"
   },
-  "_source": "git://github.com/eggboxio/quick-select.git",
+  "_source": "https://github.com/eggboxio/quick-select.git",
   "_target": "*",
   "_originalSource": "quick-select",
   "_direct": true

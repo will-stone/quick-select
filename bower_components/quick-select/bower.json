@@ -9,7 +9,7 @@
 		"forms"
 	  ],
 	"main": [
-		"./dist/js/jquery.quickselect.min.js",
+		"./dist/js/jquery.quickselect.js",
 		"./dist/css/quickselect.css"
 	],
 	"ignore": [
