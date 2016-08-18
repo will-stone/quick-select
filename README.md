@@ -9,3 +9,11 @@ Please see [the document page](http://quick-select.eggbox.io) for installation i
 ## License
 
 MIT © Will Stone
+
+## Developing
+
+```
+git clone git@github.com:eggboxio/quick-select.git
+cd quick-select
+npm install && bower install
+```
