@@ -15,5 +15,9 @@ MIT © Will Stone
 ```
 git clone git@github.com:eggboxio/quick-select.git
 cd quick-select
-npm install && bower install
+npm install
 ```
+
+`grunt serve` to test.
+
+`grunt` to build.
