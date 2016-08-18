@@ -1,3 +1,5 @@
+v2.1.0
+Added 'buttonTag' option to allow changing of HTML tag used.
 v2.0.0
 Added to Bower.
 Button classes for when SELECT is required or not.

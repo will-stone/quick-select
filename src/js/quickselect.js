@@ -1,5 +1,5 @@
 /*
- * v2.0.0
+ * v2.1.0
  *
  *
  * Copyright (c) 2015 Will Stone
