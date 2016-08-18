@@ -1,4 +1,4 @@
-/*! quickselect - v2.0.0 - 2016-07-06
+/*! quickselect - v2.1.0 - 2016-08-18
 * Copyright (c) 2016 Will Stone; Licensed MIT */
 ;(function ($, window, document, undefined) {
 
@@ -15,7 +15,8 @@
 			buttonRequiredClass: '', // added to each button if select box is a required field
 			namespace: pluginName, // CSS prepend: namespace_class
 			selectDefaultText: 'More&hellip;', // text to display on select button
-			wrapperClass: '' // class on wrapping div
+			wrapperClass: '', // class on wrapping div
+			buttonTag: 'button', // button tag
 		};
 
 	// The actual plugin constructor
@@ -40,7 +41,8 @@
 				buttonRequiredClass = this.settings.buttonRequiredClass,
 				namespace           = this.settings.namespace,
 				selectDefaultText   = this.settings.selectDefaultText,
-				wrapperClass        = this.settings.wrapperClass;
+				wrapperClass        = this.settings.wrapperClass,
+				buttonTag           = this.settings.buttonTag;
 
 			// Select element wrapper
 			var wrapper = $('<div class="' + namespace + '__wrapper ' + wrapperClass + '"></div>');
@@ -63,7 +65,7 @@
 				if (opVal) {
 					$(wrapper)
 						.append(
-							'<button aria-pressed="false" data-'+ namespace+ '-value="'+ opVal+ '" class="'+ namespace+ '__btn '+ btnClass + '"'+ disabled+'>'+ opTxt+ '</button>'
+							'<'+buttonTag+' aria-pressed="false" data-'+ namespace+ '-value="'+ opVal+ '" class="'+ namespace+ '__btn '+ btnClass + '"'+ disabled+'>'+ opTxt+ '</'+buttonTag+'>'
 						);
 				}
 			});

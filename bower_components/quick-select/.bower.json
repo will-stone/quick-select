@@ -38,11 +38,11 @@
     "Will Stone <will@eggbox.io> (http://eggbox.io)"
   ],
   "homepage": "https://github.com/eggboxio/quick-select",
-  "_release": "5519f346f0",
+  "_release": "af354014a9",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "5519f346f0722115033380eeb4dfa12ff347f89c"
+    "commit": "af354014a99199585b076c6209fe5d6a6b5c6062"
   },
   "_source": "https://github.com/eggboxio/quick-select.git",
   "_target": "*",
