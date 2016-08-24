@@ -1,6 +1,6 @@
 {
 	"name": "quick-select",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"license": "MIT",
 	"description": "A jQuery plugin for quick selection of common options in select boxes. Selectual.",
 	"keywords": [

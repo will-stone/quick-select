@@ -1,3 +1,5 @@
+v2.2.0
+Added support for module loaders.
 v2.1.0
 Added 'buttonTag' option to allow changing of HTML tag used.
 v2.0.0
