@@ -133,9 +133,13 @@
       <p>
         Include the jQuery, Quick[select] JS and CSS files then attach Quick[select] to any of your select boxes:
       </p>
-      <pre>
-        &lt;script&gt; $('select').quickselect({ breakOutValues: ['1', '2', '3'] }); &lt;/script&gt;
-      </pre>
+<pre>
+&lt;script&gt;
+	$('select').quickselect({
+		breakOutValues: ['1', '2', '3']
+	});
+&lt;/script&gt;
+</pre>
     </section>
 
 
@@ -245,14 +249,27 @@
 						});
 					</script>
       </p>
-      <pre>
-        &lt;select id="bootstrap-example"&gt; &lt;option value=""&gt;Select one...&lt;/option&gt; &lt;option value="Breakfast"&gt;Breakfast&lt;/option&gt;
-        &lt;option value="Brunch"&gt;Brunch&lt;/option&gt; &lt;option value="Lunch"&gt;Lunch&lt;/option&gt; &lt;option value="Afternoon
-        Tea"&gt;Afternoon Tea&lt;/option&gt; &lt;option value="Dinner"&gt;Dinner&lt;/option&gt; &lt;option value="Midnight
-        Snack"&gt;Midnight Snack&lt;/option&gt; &lt;option value="I do not know"&gt;I do not know&lt;/option&gt; &lt;/select&gt;
-        &lt;script&gt; $('#bootstrap-example').quickselect({ activeButtonClass: 'btn-primary active', breakOutValues: ['Breakfast',
-        'Lunch', 'Dinner'], buttonClass: 'btn btn-default', selectDefaultText: 'Other', wrapperClass: 'btn-group' }); &lt;/script&gt;
-      </pre>
+<pre>
+&lt;select id="bootstrap-example"&gt;
+	&lt;option value=""&gt;Select one...&lt;/option&gt;
+	&lt;option value="Breakfast"&gt;Breakfast&lt;/option&gt;
+	&lt;option value="Brunch"&gt;Brunch&lt;/option&gt;
+	&lt;option value="Lunch"&gt;Lunch&lt;/option&gt;
+	&lt;option value="Afternoon Tea"&gt;Afternoon Tea&lt;/option&gt;
+	&lt;option value="Dinner"&gt;Dinner&lt;/option&gt;
+	&lt;option value="Midnight Snack"&gt;Midnight Snack&lt;/option&gt;
+	&lt;option value="I do not know"&gt;I do not know&lt;/option&gt;
+&lt;/select&gt;
+&lt;script&gt;
+	$('#bootstrap-example').quickselect({
+		activeButtonClass: 'btn-primary active',
+		breakOutValues: ['Breakfast', 'Lunch', 'Dinner'],
+		buttonClass: 'btn btn-default',
+		selectDefaultText: 'Other',
+		wrapperClass: 'btn-group'
+	});
+&lt;/script&gt;
+</pre>
 
       <h5>What's your favourite meal? (show all options)</h5>
       <p>
@@ -277,14 +294,27 @@
 						});
 					</script>
       </p>
-      <pre>
-        &lt;select id="bootstrap-example2"&gt; &lt;option value=""&gt;Select one...&lt;/option&gt; &lt;option value="Breakfast"&gt;Breakfast&lt;/option&gt;
-        &lt;option value="Brunch"&gt;Brunch&lt;/option&gt; &lt;option value="Lunch"&gt;Lunch&lt;/option&gt; &lt;option value="Afternoon
-        Tea"&gt;Afternoon Tea&lt;/option&gt; &lt;option value="Dinner"&gt;Dinner&lt;/option&gt; &lt;option value="Midnight
-        Snack"&gt;Midnight Snack&lt;/option&gt; &lt;option value="I do not know"&gt;I do not know&lt;/option&gt; &lt;/select&gt;
-        &lt;script&gt; $('#bootstrap-example').quickselect({ activeButtonClass: 'btn-primary active', breakOutAll: true,
-        buttonClass: 'btn btn-default', selectDefaultText: 'Other', wrapperClass: 'btn-group' }); &lt;/script&gt;
-      </pre>
+<pre>
+&lt;select id="bootstrap-example2"&gt;
+	&lt;option value=""&gt;Select one...&lt;/option&gt;
+	&lt;option value="Breakfast"&gt;Breakfast&lt;/option&gt;
+	&lt;option value="Brunch"&gt;Brunch&lt;/option&gt;
+	&lt;option value="Lunch"&gt;Lunch&lt;/option&gt;
+	&lt;option value="Afternoon Tea"&gt;Afternoon Tea&lt;/option&gt;
+	&lt;option value="Dinner"&gt;Dinner&lt;/option&gt;
+	&lt;option value="Midnight Snack"&gt;Midnight Snack&lt;/option&gt;
+	&lt;option value="I do not know"&gt;I do not know&lt;/option&gt;
+&lt;/select&gt;
+&lt;script&gt;
+	$('#bootstrap-example').quickselect({
+		activeButtonClass: 'btn-primary active',
+		breakOutAll: true,
+		buttonClass: 'btn btn-default',
+		selectDefaultText: 'Other',
+		wrapperClass: 'btn-group'
+	});
+&lt;/script&gt;
+</pre>
 
       <h5>What's your favourite meal? (select box disabled: also disables break-out buttons)</h5>
       <p>
@@ -309,14 +339,27 @@
 						});
 					</script>
       </p>
-      <pre>
-        &lt;select id="bootstrap-example3" disabled&gt; &lt;option value=""&gt;Select one...&lt;/option&gt; &lt;option value="Breakfast"&gt;Breakfast&lt;/option&gt;
-        &lt;option value="Brunch"&gt;Brunch&lt;/option&gt; &lt;option value="Lunch"&gt;Lunch&lt;/option&gt; &lt;option value="Afternoon
-        Tea"&gt;Afternoon Tea&lt;/option&gt; &lt;option value="Dinner"&gt;Dinner&lt;/option&gt; &lt;option value="Midnight
-        Snack"&gt;Midnight Snack&lt;/option&gt; &lt;option value="I do not know"&gt;I do not know&lt;/option&gt; &lt;/select&gt;
-        &lt;script&gt; $('#bootstrap-example').quickselect({ activeButtonClass: 'btn-primary active', breakOutValues: ['Breakfast',
-        'Lunch', 'Dinner'], buttonClass: 'btn btn-default', selectDefaultText: 'Other', wrapperClass: 'btn-group' }); &lt;/script&gt;
-      </pre>
+<pre>
+&lt;select id="bootstrap-example3" disabled&gt;
+	&lt;option value=""&gt;Select one...&lt;/option&gt;
+	&lt;option value="Breakfast"&gt;Breakfast&lt;/option&gt;
+	&lt;option value="Brunch"&gt;Brunch&lt;/option&gt;
+	&lt;option value="Lunch"&gt;Lunch&lt;/option&gt;
+	&lt;option value="Afternoon Tea"&gt;Afternoon Tea&lt;/option&gt;
+	&lt;option value="Dinner"&gt;Dinner&lt;/option&gt;
+	&lt;option value="Midnight Snack"&gt;Midnight Snack&lt;/option&gt;
+	&lt;option value="I do not know"&gt;I do not know&lt;/option&gt;
+&lt;/select&gt;
+&lt;script&gt;
+	$('#bootstrap-example').quickselect({
+		activeButtonClass: 'btn-primary active',
+		breakOutValues: ['Breakfast', 'Lunch', 'Dinner'],
+		buttonClass: 'btn btn-default',
+		selectDefaultText: 'Other',
+		wrapperClass: 'btn-group'
+	});
+&lt;/script&gt;
+</pre>
 
 
       <h4>Material Design Lite theme</h4>
@@ -348,22 +391,45 @@
           }
         </style>
       </p>
-      <pre>
-        &lt;select id="mdl-example"&gt; &lt;option value=""&gt;Select one...&lt;/option&gt; &lt;option value="Indian"&gt;Indian&lt;/option&gt;
-        &lt;option value="Chinese"&gt;Chinese&lt;/option&gt; &lt;option value="Pizza"&gt;Pizza&lt;/option&gt; &lt;option
-        value="Fish and Chips"&gt;Fish and Chips&lt;/option&gt; &lt;option value="Thai"&gt;Thai&lt;/option&gt; &lt;option
-        value="Fast Food"&gt;Fast Food&lt;/option&gt; &lt;/select&gt; &lt;script&gt; $('#mdl-example').quickselect({ activeButtonClass:
-        'mdl-button--raised', breakOutValues: ['Indian', 'Pizza', 'Chinese'], buttonClass: 'mdl-button mdl-js-button mdl-js-ripple-effect
-        mdl-button--accent', selectDefaultText: 'Other', wrapperClass: 'mdl__wrapper' }); &lt;/script&gt; &lt;style type="text/css"&gt;
-        .mdl__wrapper { display: inline-block; } &lt;/style&gt;
-      </pre>
+<pre>
+&lt;select id="mdl-example"&gt;
+	&lt;option value=""&gt;Select one...&lt;/option&gt;
+	&lt;option value="Indian"&gt;Indian&lt;/option&gt;
+	&lt;option value="Chinese"&gt;Chinese&lt;/option&gt;
+	&lt;option value="Pizza"&gt;Pizza&lt;/option&gt;
+	&lt;option value="Fish and Chips"&gt;Fish and Chips&lt;/option&gt;
+	&lt;option value="Thai"&gt;Thai&lt;/option&gt;
+	&lt;option value="Fast Food"&gt;Fast Food&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;script&gt;
+	$('#mdl-example').quickselect({
+		activeButtonClass: 'mdl-button--raised',
+		breakOutValues: ['Indian', 'Pizza', 'Chinese'],
+		buttonClass: 'mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent',
+		selectDefaultText: 'Other',
+		wrapperClass: 'mdl__wrapper'
+	});
+&lt;/script&gt;
+
+&lt;style type="text/css"&gt;
+	.mdl__wrapper {
+		display: inline-block;
+	}
+&lt;/style&gt;
+</pre>
 
       <p>
         NB: the dropdown arrow icon has been added with the following CSS:
       </p>
-      <pre>
-        /* Quick[select] Tweaks */ .quickselect__more--label:before { content: '\25BE'; margin-left: 4px; opacity: .5; }
-      </pre>
+<pre>
+/* Quick[select] Tweaks */
+.quickselect__more--label:before {
+	content: '\25BE';
+	margin-left: 4px;
+	opacity: .5;
+}
+</pre>
     </section>
 
 
