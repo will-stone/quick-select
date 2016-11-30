@@ -1,5 +1,6 @@
 {
   "name": "quick-select",
+  "homepage": "http://quick-select.wstone.io/",
   "license": "MIT",
   "description": "A jQuery plugin for quick selection of common options in select boxes. Selectual.",
   "keywords": [
@@ -37,12 +38,11 @@
   "authors": [
     "Will Stone <will@wstone.io> (http://wstone.io)"
   ],
-  "homepage": "https://github.com/eggboxio/quick-select",
-  "_release": "4de0da70c0",
+  "_release": "0e50d977c2",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "4de0da70c02bab87bb66d5b574a35330ee0551e2"
+    "commit": "0e50d977c244dc7ca528187d1e1f950052753066"
   },
   "_source": "https://github.com/eggboxio/quick-select.git",
   "_target": "*",
