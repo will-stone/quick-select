@@ -1,4 +1,4 @@
 # Quick[select]
 
-See [here](http://quick-select.eggbox.io/) for more info.
+See [here](http://quick-select.wstone.io/) for more info.
 
