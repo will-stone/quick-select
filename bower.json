@@ -31,9 +31,9 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/eggboxio/quick-select.git"
+		"url": "git://github.com/will-stone/quick-select.git"
 	},
 	"authors": [
-		"Will Stone <will@eggbox.io> (http://eggbox.io)"
+		"Will Stone <will@wstone.io> (http://wstone.io)"
 	]
 }

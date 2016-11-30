@@ -7,14 +7,14 @@
   ],
   "author": {
     "name": "Will Stone",
-    "email": "will@eggbox.io",
-    "url": "https://github.com/eggboxio"
+    "email": "will@wstone.io",
+    "url": "https://github.com/will-stone"
   },
   "main": "dist/js/jquery.quickselect.min.js",
-  "homepage": "http://quick-select.eggbox.io/",
+  "homepage": "http://quick-select.wstone.io/",
   "repository": {
     "type": "git",
-    "url": "git://github.com/eggboxio/quick-select.git"
+    "url": "git://github.com/will-stone/quick-select.git"
   },
   "license": "MIT",
   "scripts": {
