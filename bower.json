@@ -1,6 +1,7 @@
 {
 	"name": "quick-select",
-	"version": "2.2.1",
+	"homepage": "http://quick-select.wstone.io/",
+	"version": "2.2.2",
 	"license": "MIT",
 	"description": "A jQuery plugin for quick selection of common options in select boxes. Selectual.",
 	"keywords": [
