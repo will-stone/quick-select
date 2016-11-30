@@ -32,17 +32,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/eggboxio/quick-select.git"
+    "url": "git://github.com/will-stone/quick-select.git"
   },
   "authors": [
-    "Will Stone <will@eggbox.io> (http://eggbox.io)"
+    "Will Stone <will@wstone.io> (http://wstone.io)"
   ],
   "homepage": "https://github.com/eggboxio/quick-select",
-  "_release": "af354014a9",
+  "_release": "4de0da70c0",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "af354014a99199585b076c6209fe5d6a6b5c6062"
+    "commit": "4de0da70c02bab87bb66d5b574a35330ee0551e2"
   },
   "_source": "https://github.com/eggboxio/quick-select.git",
   "_target": "*",

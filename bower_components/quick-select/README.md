@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-Please see [the document page](http://quick-select.eggbox.io) for installation information and examples.
+Please see [the document page](http://quick-select.wstone.io) for installation information and examples.
 
 ## License
 
@@ -13,9 +13,9 @@ MIT © Will Stone
 ## Developing
 
 ```
-git clone git@github.com:eggboxio/quick-select.git
+git clone git@github.com:will-stone/quick-select.git
 cd quick-select
-npm install
+npm install && bower install
 ```
 
 `grunt serve` to test.

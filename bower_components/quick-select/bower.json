@@ -1,6 +1,6 @@
 {
 	"name": "quick-select",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"license": "MIT",
 	"description": "A jQuery plugin for quick selection of common options in select boxes. Selectual.",
 	"keywords": [
@@ -31,9 +31,9 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/eggboxio/quick-select.git"
+		"url": "git://github.com/will-stone/quick-select.git"
 	},
 	"authors": [
-		"Will Stone <will@eggbox.io> (http://eggbox.io)"
+		"Will Stone <will@wstone.io> (http://wstone.io)"
 	]
 }
